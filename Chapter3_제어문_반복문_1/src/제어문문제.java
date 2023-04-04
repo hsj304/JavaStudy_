@@ -41,7 +41,7 @@ public class 제어문문제 {
 //		Scanner scanner = new Scanner(System.in);
 //		System.out.print("년도 입력:"); int year = scanner.nextInt();
 //		
-//		if((year %4==0 || year%100 !=0) && year%400==0)
+//		if((year %4==0 && year%100 !=0) || year%400==0)
 //			System.out.println(year + "년은 윤년입니다.");
 //		else
 //			System.out.println(year + "년은 윤년이 아닙니다.");
@@ -87,12 +87,10 @@ public class 제어문문제 {
 	//12) 1부터 30까지의 정수에서 짝수만 한 줄에 3개씩 출력하라
 //	public static void main(String[] args) {
 //		
-//		int count=0;
-//		
 //		for(int i=2;i<=30;i += 2) {
-//			System.out.print(i+" ");
-//			count++;
-//			if(count %3==0) {
+//			System.out.printf("%2d ", i);
+//			
+//			if(i %6==0) {
 //				System.out.println();
 //			}
 //		}
@@ -124,26 +122,21 @@ public class 제어문문제 {
 //	}
 	
 	//16)	숫자를 입력받아 3~5는 봄, 6~8은 여름, 9~11은 가을, 12,1,2는 겨울, 그 외의 숫자를 입력한 경우 잘못입력을 출력하는 프로그램을 작성하라. if-else 문과 switch 둘 다 이용해 볼 것.
-//	public static void main(String[] args) {
-//		Scanner scanner = new Scanner(System.in);
-//		System.out.print("달을 입력하세요(1~12) : "); int month = scanner.nextInt();
-//		
-//		if(month >= 3 && month <=5) {
-//			System.out.println("봄");
-//		} else if (month >= 6 && month <=8) {
-//			System.out.println("여름");
-//		} else if (month >= 9 && month <=11) {
-//			System.out.println("가을");
-//		} else if (month == 11 || month == 1 || month ==2) {
-//			System.out.println("겨울");
-//		} else {
-//			System.out.println("잘못 입력하셨습니다.");
-//		}
-//	}
-	
-	//17)	1에서 100까지 3의 배수를 더하는 while 문의 빈칸에 적절한 코드를 삽입하라
 	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("달을 입력하세요(1~12) : "); int month = scanner.nextInt();
 		
+		if(month >= 3 && month <=5) {
+			System.out.println("봄");
+		} else if (month >= 6 && month <=8) {
+			System.out.println("여름");
+		} else if (month >= 9 && month <=11) {
+			System.out.println("가을");
+		} else if (month == 12 || month == 1 || month == 2) {
+			System.out.println("겨울");
+		} else {
+			System.out.println("잘못 입력하셨습니다.");
+		}
 	}
 	
 }
