@@ -20,15 +20,29 @@ public class 라이브러리_String_4 {
 				continue;
 			}
 			break;
-			
 		}
 		
 		boolean b=true;
 		for(int i=0;i<s.length()/2;i++) {
 			if(s.charAt(i) != s.charAt(s.length()-i-1)) {
 				b = false;
+				break;
 			} 
 		}
+		
+//		boolean b=false;
+//		int j= s.length()-1;
+//		for(int i=0;i<s.length()/2;i++) {
+//			if(s.charAt(i) == s.charAt(j)) {
+//				b = true;
+//			} else {
+//				b=false;
+//				break;
+//			}
+//			j--;
+//		}
+		
+		
 		
 		if(b) {
 			System.out.println(s + "는 대칭입니다");
